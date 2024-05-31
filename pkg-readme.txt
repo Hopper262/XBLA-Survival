@@ -1,4 +1,4 @@
-XBLA Survival 2.0
+XBLA Survival 2.1
 -----------------
 maps and gameplay by Freeverse
 coding by Hopper
@@ -49,6 +49,10 @@ NOTE: Other solo Lua plugins or scripts, including Cheats.lua, MUST be disabled 
 ----------------------------------------------------------------
 CHANGELOG:
 
+v2.1:
+* Films should no longer go out of sync
+  (thanks to treellama and Captain-Fwiffo)
+
 v2.0:
 * Now includes the original Freeverse maps!
 
@@ -66,7 +70,7 @@ v1.0:
 SPECIAL THANKS:
 
 Bruce Morrison - for making this possible
-Treellama - for adding the necessary Lua APIs
+treellama - for adding the necessary Lua APIs
 
 ----------------------------------------------------------------
 CONTACT:

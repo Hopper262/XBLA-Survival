@@ -1,4 +1,4 @@
--- XBLA Survival 2.0
+-- XBLA Survival 2.1
 -- design by Freeverse
 -- coding by Hopper
 
@@ -81,7 +81,7 @@ function Triggers.idle()
     end
     
     -- replenish monsters ourselves, since XBLA changed the placement logic
-    -- (monsters teleport in, and will do so in visible locations) 
+    -- (monsters teleport in, and will do so in visible locations)
     if (Game.ticks % (15*30)) == 1 then
       ReplaceMonsters()
     end
@@ -333,7 +333,7 @@ function polygon_is_valid_for_item_drop(poly)
   if ptype == "item impassable" or
      ptype == "monster impassable" or
      ptype == "platform" or
-     ptype == "teleporter" then 
+     ptype == "teleporter" then
     return false
   end
   for item in Items() do
@@ -347,7 +347,7 @@ function polygon_is_valid_for_monster_drop(poly, mtype)
   local ptype = poly.type.mnemonic
   if ptype == "monster impassable" or
      ptype == "platform" or
-     ptype == "teleporter" then 
+     ptype == "teleporter" then
     return false
   end
   -- disallow too-small polygons
@@ -427,13 +427,16 @@ function ReplaceMonsters()
     end
   end
   
-  for mt, cur in pairs(mcounts) do
-    local add = 0
-    local min = mt.minimum_count
-    if mt.total_available == -1 then min = mt.maximum_count end
-    if cur < min then add = min - cur end
-    for i = 1,add do
-      PlaceMonster(mt)
+  for mt in MonsterTypes() do
+    local cur = mcounts[mt]
+    if cur ~= nil then
+      local add = 0
+      local min = mt.minimum_count
+      if mt.total_available == -1 then min = mt.maximum_count end
+      if cur < min then add = min - cur end
+      for i = 1,add do
+        PlaceMonster(mt)
+      end
     end
   end
 end

@@ -1,4 +1,3 @@
-<plugin name="XBLA Survival" version="2.0" description="Play solo on netmaps, score points, stay alive" solo_lua="XBLA_Survival.lua">
+<plugin name="XBLA Survival" version="2.1" description="Play solo on netmaps, score points, stay alive" solo_lua="XBLA_Survival.lua">
  <mml file="Aleph_One_Previous_AI.mml"/>
 </plugin>
-
