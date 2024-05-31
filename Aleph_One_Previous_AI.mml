@@ -1,0 +1,54 @@
+<marathon>
+  <dynamic_limits>
+    <paths value="128"/>
+  </dynamic_limits>
+</marathon>
+
+<!-- Limits from Marathon 2/Infinity:
+
+<marathon>
+  <dynamic_limits>
+    <objects value="384"/>
+    <monsters value="220"/>
+    <paths value="20"/>
+    <projectiles value="32"/>
+    <effects value="64"/>
+    <rendered value="72"/>
+    <local_collision value="16"/>
+    <global_collision value="64"/>
+  </dynamic_limits>
+</marathon>
+
+-->
+<!-- Limits from Aleph One 1.0 and earlier:
+
+<marathon>
+  <dynamic_limits>
+    <objects value="1024"/>
+    <monsters value="512"/>
+    <paths value="128"/>
+    <projectiles value="128"/>
+    <effects value="128"/>
+    <rendered value="1024"/>
+    <local_collision value="64"/>
+    <global_collision value="256"/>
+  </dynamic_limits>
+</marathon>
+
+-->
+<!-- Limits from Aleph One 1.1:
+
+<marathon>
+  <dynamic_limits>
+    <objects value="1024"/>
+    <monsters value="512"/>
+    <paths value="20"/>
+    <projectiles value="128"/>
+    <effects value="128"/>
+    <rendered value="1024"/>
+    <local_collision value="64"/>
+    <global_collision value="256"/>
+  </dynamic_limits>
+</marathon>
+
+-->
